@@ -1,0 +1,15 @@
+{
+	"name": "dmhien-earthquake-adf",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "77c6d0dc-30a4-4604-97d4-42722d3e0ab3",
+		"tenantId": "59c53945-b5e4-4eba-bae0-af3e719eb062"
+	}
+}
