@@ -1,0 +1,31 @@
+{
+	"name": "EarthquakeBronze",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EarthquakeAdls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"fetchDate": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@{concat('raw-', formatDateTime(dataset().fetchDate, 'yyyy-MM-dd'), '.csv')}",
+					"type": "Expression"
+				},
+				"folderPath": "bronze"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

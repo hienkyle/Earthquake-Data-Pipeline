@@ -1,0 +1,30 @@
+{
+	"name": "EarthquakeRawData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EarthquakeHttp",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"fetchDate": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "query?format=csv&start=@{formatDateTime(startOfDay(dataset().fetchDate),'yyyy-MM-ddTHH:mm:ssZ')}&end=@{formatDateTime(addSeconds(startOfDay(addDays(dataset().fetchDate,1)),-1),'yyyy-MM-ddTHH:mm:ssZ')}",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
