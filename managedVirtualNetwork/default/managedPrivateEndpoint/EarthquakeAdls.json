@@ -1,0 +1,7 @@
+{
+	"name": "EarthquakeAdls",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/3530fd8f-4627-4b19-a808-e578e6378bc2/resourceGroups/hien-rg/providers/Microsoft.Storage/storageAccounts/dmhearthquakestorage",
+		"groupId": "dfs"
+	}
+}
