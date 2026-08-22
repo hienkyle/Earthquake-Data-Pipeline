@@ -143,7 +143,8 @@
 							"value": "@{concat('raw-', formatDateTime(dataset().fetchDate, 'yyyy-MM-dd'), '.csv')}",
 							"type": "Expression"
 						},
-						"folderPath": "bronze"
+						"folderPath": "bronze",
+						"fileSystem": "earthquakedata"
 					},
 					"columnDelimiter": ",",
 					"escapeChar": "\\",
