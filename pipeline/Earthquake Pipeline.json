@@ -68,8 +68,7 @@
 		],
 		"parameters": {
 			"fetchDate": {
-				"type": "string",
-				"defaultValue": "@formatDateTime(addDays(utcnow(),-1),'yyyy-MM-dd')"
+				"type": "string"
 			}
 		},
 		"annotations": []
